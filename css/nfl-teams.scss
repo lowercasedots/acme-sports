@@ -1,0 +1,136 @@
+$black: #000;
+$darkgrey: #333;
+$lightgrey: #ccc;
+
+.nfl-teams {
+    max-width: 650px;
+
+    &.error {
+        background: #ffaaaa;
+        border: 1px solid $black;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 1rem;
+        line-height: 1.2;
+        border-spacing: 0;
+        
+        @media only screen and (max-width: 750px) {
+            font-size: 0.8rem;
+        }
+    }
+    
+    th {
+        cursor: pointer;
+        text-align: left;
+        padding: 5px 10px;
+
+        @media only screen and (max-width: 750px) {
+            text-align: center;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 6px solid #7c7c7c;
+            position: relative;
+            display: inline-block;
+            top: 0;
+            left: 6px;
+            transition: transform 200ms ease-in;
+            transform: rotate(0deg);
+            font-size: 0;
+    
+            @media only screen and (max-width: 750px) {
+                display: block;
+                margin: 5px auto;
+                left: 0;
+            }
+
+            &.asc {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    //removing the outer borders to make it look less "Excel spreadsheet"ish, and show off :first/last-of-type selectors.
+    tr {
+        td {
+            &:first-of-type {
+                border-left: 0;
+            }
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+
+        &:first-of-type {
+            td {
+                border-top: 0;
+            }
+        }
+        &:last-of-type {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .cell {
+        padding: 5px 10px;
+    }
+
+    .light {
+        background: $lightgrey;
+        color: $darkgrey;
+
+        td {
+            border: 1px solid $darkgrey;
+        }
+    }
+
+    .dark {
+        background: $darkgrey;
+        color: $lightgrey;
+
+        td {
+            border: 1px solid $lightgrey;
+        }
+    }
+
+    //the secret color theme inspired by mIRC/Geocities! It's as awful as you'd expect: [nfl_teams theme="mirc"]
+    .mirc {
+        background: $black;
+        color: #00ff00;
+        font-family: monospace;
+        border-spacing: 2px;
+
+        tr:nth-child(4n + 2) {
+            color: #ffff00;
+            font-family: "Courier New", cursive;
+        }
+
+        tr:nth-child(4n + 3) {
+            color: #ff0000;
+            font-family: "Trebuchet MS", cursive;
+        }
+
+        tr:nth-child(4n) {
+            font-family: 'Comic Sans MS', cursive;
+            color: #0080ff;
+        }
+        .cell {
+            border: 1px dashed $lightgrey;
+            padding: 10px;
+        }
+        .arrow {
+            border-bottom: 6px solid #00ff00;
+        }
+    }
+}

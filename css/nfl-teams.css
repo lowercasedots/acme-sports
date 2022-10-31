@@ -1,0 +1,109 @@
+.nfl-teams {
+  max-width: 650px;
+}
+.nfl-teams.error {
+  background: #ffaaaa;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.nfl-teams table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-spacing: 0;
+}
+@media only screen and (max-width: 750px) {
+  .nfl-teams table {
+    font-size: 0.8rem;
+  }
+}
+.nfl-teams th {
+  cursor: pointer;
+  text-align: left;
+  padding: 5px 10px;
+}
+@media only screen and (max-width: 750px) {
+  .nfl-teams th {
+    text-align: center;
+  }
+}
+.nfl-teams th .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #7c7c7c;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 6px;
+  transition: transform 200ms ease-in;
+  transform: rotate(0deg);
+  font-size: 0;
+}
+@media only screen and (max-width: 750px) {
+  .nfl-teams th .arrow {
+    display: block;
+    margin: 5px auto;
+    left: 0;
+  }
+}
+.nfl-teams th .arrow.asc {
+  transform: rotate(180deg);
+}
+.nfl-teams tr td:first-of-type {
+  border-left: 0;
+}
+.nfl-teams tr td:last-of-type {
+  border-right: 0;
+}
+.nfl-teams tr:first-of-type td {
+  border-top: 0;
+}
+.nfl-teams tr:last-of-type td {
+  border-bottom: 0;
+}
+.nfl-teams .cell {
+  padding: 5px 10px;
+}
+.nfl-teams .light {
+  background: #ccc;
+  color: #333;
+}
+.nfl-teams .light td {
+  border: 1px solid #333;
+}
+.nfl-teams .dark {
+  background: #333;
+  color: #ccc;
+}
+.nfl-teams .dark td {
+  border: 1px solid #ccc;
+}
+.nfl-teams .mirc {
+  background: #000;
+  color: #00ff00;
+  font-family: monospace;
+  border-spacing: 2px;
+}
+.nfl-teams .mirc tr:nth-child(4n+2) {
+  color: #ffff00;
+  font-family: "Courier New", cursive;
+}
+.nfl-teams .mirc tr:nth-child(4n+3) {
+  color: #ff0000;
+  font-family: "Trebuchet MS", cursive;
+}
+.nfl-teams .mirc tr:nth-child(4n) {
+  font-family: "Comic Sans MS", cursive;
+  color: #0080ff;
+}
+.nfl-teams .mirc .cell {
+  border: 1px dashed #ccc;
+  padding: 10px;
+}
+.nfl-teams .mirc .arrow {
+  border-bottom: 6px solid #00ff00;
+}/*# sourceMappingURL=nfl-teams.css.map */
